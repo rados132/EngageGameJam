@@ -1,2 +1,2 @@
 # EngageGameJam
-# Repo za Engage Game Jam hakaton
+Repo za Engage Game Jam hakaton
