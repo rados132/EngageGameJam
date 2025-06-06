@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cw18h5kl81lwy"]
+[gd_scene load_steps=16 format=3 uid="uid://chcshj8fm1l03"]
 
 [ext_resource type="Script" uid="uid://cku1qysvx5a43" path="res://Scripts/radoshLik.gd" id="1_f85xk"]
 [ext_resource type="Texture2D" uid="uid://bhru1towfgn5m" path="res://Assets/Free/Main Characters/Mask Dude/Idle (32x32).png" id="2_d8e78"]
