@@ -5,6 +5,7 @@ const MAX_SPEED = 100
 const FRICTION = 10000
 
 var speed = Vector2.ZERO
+var health = 100
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -18,3 +19,13 @@ func _physics_process(delta):
 		speed = speed.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	move_and_collide(speed)
+
+func take_damage(amount):
+	health -= amount
+	print("Player health:", health)
+	if health <= 0:
+		die()
+
+func die():
+	print("Player has died!")
+	# Add your death logic here (e.g., respawn, game over, etc.)

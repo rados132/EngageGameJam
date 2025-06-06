@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dkx4qx70dweay"]
+[gd_scene load_steps=12 format=4 uid="uid://ksqp5k47phfm"]
 
 [ext_resource type="Texture2D" uid="uid://p5glvm2hn77f" path="res://Assets/Free/Terrain/Terrain (16x16).png" id="1_2hjwy"]
 [ext_resource type="PackedScene" uid="uid://d1qghewe3uu5r" path="res://Assets/characters/main_character.tscn" id="2_25a10"]
@@ -314,6 +314,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextEdit3" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = -976.0
 offset_top = 120.0
 offset_right = -816.0
@@ -323,6 +324,7 @@ text = "Ovde su stepenice
 "
 
 [node name="TextEdit5" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = 168.0
 offset_top = -40.0
 offset_right = 328.0
@@ -332,6 +334,7 @@ text = "Ovde su stepenice
 "
 
 [node name="TextEdit4" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = 1232.0
 offset_top = 104.0
 offset_right = 1392.0
@@ -341,6 +344,7 @@ text = "Ovde su stepenice
 "
 
 [node name="TextEdit6" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = 160.0
 offset_top = 200.0
 offset_right = 320.0
@@ -350,6 +354,7 @@ text = "Ovde su stepenice
 "
 
 [node name="TextEdit7" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = -24.0
 offset_top = 64.0
 offset_right = 136.0
@@ -359,6 +364,7 @@ text = "Ulaz u podrum
 "
 
 [node name="TextEdit8" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = 360.0
 offset_top = 64.0
 offset_right = 520.0
@@ -368,6 +374,7 @@ text = "Ulaz u podrum
 "
 
 [node name="TextEdit" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = 744.0
 offset_top = 264.0
 offset_right = 968.0
@@ -378,6 +385,7 @@ Ide animacija iza
 "
 
 [node name="TextEdit9" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = -472.0
 offset_top = 272.0
 offset_right = -248.0
@@ -388,6 +396,7 @@ Ide animacija iza
 "
 
 [node name="TextEdit12" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = 96.0
 offset_top = 456.0
 offset_right = 320.0
@@ -397,6 +406,7 @@ text = "izlaz iz zgrade (scene -2)
 "
 
 [node name="TextEdit10" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = -456.0
 offset_top = -192.0
 offset_right = -232.0
@@ -407,6 +417,7 @@ Ide animacija iza
 "
 
 [node name="TextEdit11" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = 752.0
 offset_top = -184.0
 offset_right = 976.0
@@ -417,6 +428,7 @@ Ide animacija iza
 "
 
 [node name="TextEdit2" type="TextEdit" parent="textovi"]
+layout_mode = 0
 offset_left = 1168.0
 offset_top = -376.0
 offset_right = 1224.0

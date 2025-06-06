@@ -1,7 +1,8 @@
 extends CharacterBody2D
 @onready var target = $"../Main_Character"
-var speed = 100
-var attack_cooldown = 1.0 # u sekundama
+const speed = 100
+const attack_cooldown = 1.0 # u sekundama
+const damage = 10
 var player_in_area = false
 
 func _ready():
@@ -37,4 +38,6 @@ func _on_attack_cooldown_timeout():
 		attack()
 
 func attack():
+	if target and target.has_method("take_damage"):
+		target.take_damage(damage)
 	print("Napad!")  # Zamijeni kasnije sa nanosenjem stete
