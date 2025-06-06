@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://bg4sn5egm06hu"]
+[gd_scene load_steps=2 format=3 uid="uid://bg4sn5egm06hu"]
+
+[ext_resource type="PackedScene" uid="uid://d1qghewe3uu5r" path="res://Assets/characters/main_character.tscn" id="1_ebmjs"]
 
 [node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ebmjs")]
