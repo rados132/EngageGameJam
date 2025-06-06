@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://f45qahmic0vw"]
 
-[ext_resource type="Texture2D" uid="uid://dm1igju2wux1n" path="res://Assets/Free/Background/Green.png" id="1_3g0nu"]
+[ext_resource type="Texture2D" uid="uid://crwdffs5rtlfx" path="res://Assets/tiles/Sprite-patos.png" id="1_525jn"]
 [ext_resource type="Texture2D" uid="uid://p5glvm2hn77f" path="res://Assets/Free/Terrain/Terrain (16x16).png" id="2_525jn"]
 [ext_resource type="PackedScene" uid="uid://d1qghewe3uu5r" path="res://Assets/characters/main_character.tscn" id="3_p11ma"]
 [ext_resource type="PackedScene" uid="uid://chcshj8fm1l03" path="res://Assets/characters/enemy_ai.tscn" id="4_525jn"]
@@ -192,7 +192,7 @@ offset_right = 1182.0
 offset_bottom = 498.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_3g0nu")
+texture = ExtResource("1_525jn")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
