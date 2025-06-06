@@ -1,6 +1,6 @@
 extends CharacterBody2D
-@onready var target = $"../CharacterBody2D"
-var speed = 150
+@onready var target = $"../Main_Character"
+var speed = 100
 
 func _physics_process(delta: float) -> void:
 	# Move towards the target
