@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@onready var target = $"../proba-character"
+@onready var target = $"../main_character"
 var speed = 150
 
 func _physics_process(delta: float) -> void:
