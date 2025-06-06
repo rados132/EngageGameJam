@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EngageGameJam"
-run/main_scene="uid://f45qahmic0vw"
+run/main_scene="uid://bccllisa6ct6f"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
