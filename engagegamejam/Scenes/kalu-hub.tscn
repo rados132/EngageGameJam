@@ -281,7 +281,7 @@ texture = ExtResource("3_s5eos")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_ieoyg")
 
-[node name="Kalu-hub" type="Node"]
+[node name="Kalu-hub(scene 0)" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bvgcc")
@@ -305,21 +305,121 @@ tile_set = SubResource("TileSet_q2va5")
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_25a10")]
 position = Vector2(790, 378)
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 744.0
-offset_top = 240.0
-offset_right = 968.0
-offset_bottom = 288.0
-text = "ovo je hodnik sa prozorima
+[node name="NavigationLink2D" type="NavigationLink2D" parent="."]
+
+[node name="textovi" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextEdit3" type="TextEdit" parent="textovi"]
+offset_left = -976.0
+offset_top = 120.0
+offset_right = -816.0
+offset_bottom = 232.0
+text = "Ovde su stepenice
 
 "
 
-[node name="TextEdit2" type="TextEdit" parent="."]
+[node name="TextEdit5" type="TextEdit" parent="textovi"]
+offset_left = 168.0
+offset_top = -40.0
+offset_right = 328.0
+offset_bottom = 72.0
+text = "Ovde su stepenice
+
+"
+
+[node name="TextEdit4" type="TextEdit" parent="textovi"]
+offset_left = 1232.0
+offset_top = 104.0
+offset_right = 1392.0
+offset_bottom = 216.0
+text = "Ovde su stepenice
+
+"
+
+[node name="TextEdit6" type="TextEdit" parent="textovi"]
+offset_left = 160.0
+offset_top = 200.0
+offset_right = 320.0
+offset_bottom = 312.0
+text = "Ovde su stepenice
+
+"
+
+[node name="TextEdit7" type="TextEdit" parent="textovi"]
+offset_left = -24.0
+offset_top = 64.0
+offset_right = 136.0
+offset_bottom = 176.0
+text = "Ulaz u podrum
+
+"
+
+[node name="TextEdit8" type="TextEdit" parent="textovi"]
+offset_left = 360.0
+offset_top = 64.0
+offset_right = 520.0
+offset_bottom = 176.0
+text = "Ulaz u podrum
+
+"
+
+[node name="TextEdit" type="TextEdit" parent="textovi"]
+offset_left = 744.0
+offset_top = 264.0
+offset_right = 968.0
+offset_bottom = 312.0
+text = "ovo je hodnik sa prozorima
+Ide animacija iza
+
+"
+
+[node name="TextEdit9" type="TextEdit" parent="textovi"]
+offset_left = -472.0
+offset_top = 272.0
+offset_right = -248.0
+offset_bottom = 320.0
+text = "ovo je hodnik sa prozorima
+Ide animacija iza
+
+"
+
+[node name="TextEdit12" type="TextEdit" parent="textovi"]
+offset_left = 96.0
+offset_top = 456.0
+offset_right = 320.0
+offset_bottom = 504.0
+text = "izlaz iz zgrade (scene -2)
+
+"
+
+[node name="TextEdit10" type="TextEdit" parent="textovi"]
+offset_left = -456.0
+offset_top = -192.0
+offset_right = -232.0
+offset_bottom = -144.0
+text = "ovo je hodnik sa prozorima
+Ide animacija iza
+
+"
+
+[node name="TextEdit11" type="TextEdit" parent="textovi"]
+offset_left = 752.0
+offset_top = -184.0
+offset_right = 976.0
+offset_bottom = -136.0
+text = "ovo je hodnik sa prozorima
+Ide animacija iza
+
+"
+
+[node name="TextEdit2" type="TextEdit" parent="textovi"]
 offset_left = 1168.0
 offset_top = -376.0
 offset_right = 1224.0
 offset_bottom = -344.0
 text = "70ica
 "
-
-[node name="NavigationLink2D" type="NavigationLink2D" parent="."]
