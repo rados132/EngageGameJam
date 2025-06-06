@@ -1,7 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://d1qghewe3uu5r"]
+[gd_scene load_steps=16 format=3 uid="uid://d1qghewe3uu5r"]
 
 [ext_resource type="Script" uid="uid://vwmrxnq7d01i" path="res://Assets/characters/player.gd" id="1_tc2lg"]
 [ext_resource type="Texture2D" uid="uid://bva1lynyc7dlj" path="res://Assets/Free/Main Characters/Ninja Frog/Idle (32x32).png" id="2_6x2ms"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tc2lg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qxxq3"]
 atlas = ExtResource("2_6x2ms")
@@ -93,9 +95,13 @@ script = ExtResource("1_tc2lg")
 metadata/_edit_vertical_guides_ = [-30.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_tc2lg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_vdoty")
 autoplay = "default"
 frame_progress = 0.101428
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
