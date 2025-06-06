@@ -2,13 +2,15 @@ extends CharacterBody2D
 @onready var target = $"../Main_Character"
 var speed = 100
 
-func _physics_process(delta: float) -> void:
+
+func _physics_process(_delta: float) -> void:
 	# Move towards the target
 	var direction = (target.position - position).normalized()
 	velocity = direction * speed
 	# Move the character
 	look_at(target.position)
 	move_and_slide()
+
 
 # # Called when the node enters the scene tree for the first time.
 # func _ready() -> void:
