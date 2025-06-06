@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://chcshj8fm1l03"]
+[gd_scene load_steps=17 format=3 uid="uid://chcshj8fm1l03"]
 
 [ext_resource type="Script" uid="uid://dlbi12ywvtvt1" path="res://Scripts/enemy_ai.gd" id="1_f85xk"]
 [ext_resource type="Texture2D" uid="uid://bhru1towfgn5m" path="res://Assets/Free/Main Characters/Mask Dude/Idle (32x32).png" id="2_d8e78"]
@@ -90,6 +90,8 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e4st5"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f85xk"]
+
 [node name="Enemy_AI" type="CharacterBody2D"]
 script = ExtResource("1_f85xk")
 
@@ -100,3 +102,9 @@ frame_progress = 0.950946
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_e4st5")
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+scale = Vector2(1.1, 1.1)
+shape = SubResource("CapsuleShape2D_f85xk")
