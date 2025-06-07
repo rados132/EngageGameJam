@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://bvel66stbxs6y"]
+[gd_scene load_steps=6 format=4 uid="uid://bvel66stbxs6y"]
 
 [ext_resource type="Texture2D" uid="uid://dixq4sc0e1yb4" path="res://Assets/Bulevar aseti/bulevarKA.png" id="1_qwjnv"]
 [ext_resource type="PackedScene" uid="uid://d1qghewe3uu5r" path="res://Assets/characters/main_character.tscn" id="2_20rnu"]
+[ext_resource type="PackedScene" uid="uid://dghvpexgmiof1" path="res://Scenes/Bus.tscn" id="3_20rnu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wm8lu"]
 texture = ExtResource("1_qwjnv")
@@ -149,4 +150,7 @@ tile_map_data = PackedByteArray("AAAAAPn/AQAAAAAAAAAAAPr/AQAAAAEAAAAAAPv/AQAAAAI
 tile_set = SubResource("TileSet_6asvu")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_20rnu")]
-position = Vector2(5360, 0)
+position = Vector2(5368, 0)
+
+[node name="Bus" parent="." instance=ExtResource("3_20rnu")]
+position = Vector2(4656, -8)
