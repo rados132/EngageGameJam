@@ -1,8 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8830lrj5iqa"]
+[gd_scene load_steps=10 format=3 uid="uid://b8830lrj5iqa"]
 
+[ext_resource type="Texture2D" uid="uid://ce41mtdjq7hst" path="res://Assets/Free/Background/Pink.png" id="1_7h2jp"]
 [ext_resource type="Texture2D" uid="uid://bsrm3crxtco0s" path="res://Assets/Free/UI Pack/Vector/Blue/button_rectangle_flat.svg" id="1_a33jj"]
 [ext_resource type="Texture2D" uid="uid://cdslyiudow1qt" path="res://Assets/Free/UI Pack/Vector/Extra/button_rectangle_depth_line.svg" id="1_xkdtw"]
 [ext_resource type="Texture2D" uid="uid://bvbg7xogpl4w2" path="res://Assets/Free/UI Pack/Vector/Extra/button_rectangle_line.svg" id="3_mkmqd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxf2x"]
+texture = ExtResource("1_7h2jp")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mkmqd"]
 texture = ExtResource("1_a33jj")
@@ -65,6 +69,7 @@ offset_right = 256.0
 offset_bottom = 197.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hxf2x")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="StatsInventoryWindow"]
 layout_mode = 1
@@ -101,3 +106,22 @@ metadata/_tab_index = 0
 [node name="Stats" type="Control" parent="StatsInventoryWindow/VBoxContainer/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Stats"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -256.0
+offset_right = 256.0
+offset_bottom = 367.0
+grow_horizontal = 2
+theme_override_constants/separation = 15
+
+[node name="Health_Label" type="Label" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Stats/VBoxContainer"]
+layout_mode = 2
+text = "Health: 100"
+
+[node name="Level_Label" type="Label" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Stats/VBoxContainer"]
+layout_mode = 2
+text = "Level 1"
