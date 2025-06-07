@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://burjv7qljt11i"]
+[gd_scene load_steps=15 format=4 uid="uid://burjv7qljt11i"]
 
 [ext_resource type="Texture2D" uid="uid://p5glvm2hn77f" path="res://Assets/Free/Terrain/Terrain (16x16).png" id="1_2hjwy"]
 [ext_resource type="Script" uid="uid://epmp3gf6csg5" path="res://Scripts/kalu_hub.gd" id="1_q2va5"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bu35iqfvilj0q" path="res://Assets/Free/Background/Purple.png" id="2_s5eos"]
 [ext_resource type="Texture2D" uid="uid://blyf5olk8qn7c" path="res://Assets/HubAsseti/stub.png" id="3_s5eos"]
 [ext_resource type="PackedScene" uid="uid://chcshj8fm1l03" path="res://Assets/characters/enemy_ai.tscn" id="5_bvgcc"]
-[ext_resource type="PackedScene" uid="uid://b8830lrj5iqa" path="res://Scenes/character_page.tscn" id="6_ieoyg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5eos"]
 texture = ExtResource("1_2hjwy")
@@ -453,17 +452,3 @@ radius = 60.5
 
 [node name="Main_Character" parent="." instance=ExtResource("2_25a10")]
 position = Vector2(790, 378)
-
-[node name="Camera2D2" type="Camera2D" parent="Main_Character"]
-zoom = Vector2(3.2, 3.2)
-
-[node name="CharacterPage" parent="Main_Character/Camera2D2" instance=ExtResource("6_ieoyg")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -86.0
-offset_top = -74.0
-offset_right = -86.0
-offset_bottom = -74.0
-grow_horizontal = 1
-grow_vertical = 1
