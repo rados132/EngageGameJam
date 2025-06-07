@@ -1,23 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://otbnlyc3pkit"]
 
-[ext_resource type="Script" path="res://projecile_enemy.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://dsdu37w7f5plg" path="res://icon.svg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://fla0vf2j3rf4" path="res://projecile_enemy.gd" id="1_wkbwq"]
+[ext_resource type="Texture2D" uid="uid://dsdu37w7f5plg" path="res://icon.svg" id="2_ws556"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
 size = Vector2(128, 128)
 
-[node name="Node2D" type="Node2D"]
-position = Vector2(440, 336)
-script = ExtResource("1_0e48y")
+[node name="projectile_enemy" type="Node2D"]
+position = Vector2(304, 192)
+script = ExtResource("1_wkbwq")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(0, -2)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_ws556")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_0hol4")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="CharacterBody2D"]
 position = Vector2(80, 0)
