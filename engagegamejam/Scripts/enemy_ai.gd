@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var target = $"../../Main_Character"
 @onready var agent = $NavigationAgent2D
-const speed = 50
+const speed = 80
 const attack_cooldown = 1.0 # u sekundama
 const damage = 10
 var player_in_area = false
