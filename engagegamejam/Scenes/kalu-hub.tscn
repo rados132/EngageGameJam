@@ -446,7 +446,10 @@ navigation_polygon = SubResource("NavigationPolygon_s5eos")
 position = Vector2(-152, 384)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="NavigationRegion2D/Enemy_AI"]
+simplify_path = true
+avoidance_enabled = true
 radius = 60.5
+debug_enabled = true
 
 [node name="Main_Character" parent="." instance=ExtResource("2_25a10")]
 position = Vector2(790, 378)

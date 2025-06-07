@@ -25,12 +25,12 @@ func _physics_process(_delta: float) -> void:
 	if agent.is_navigation_finished():
 		velocity = Vector2.ZERO
 	else:
-		var next_path_point = agent.get_next_path_position()
-		var distance = global_position.distance_to(next_path_point)
-		if distance > 2.0: # Only move if not already at the point
-			var direction = (next_path_point - global_position).normalized()
-			velocity = direction * speed
-			# look_at(next_path_point)
+		var next_point = agent.get_next_path_position()
+		var direction = (next_point - global_position)
+		direction = direction.normalized()  
+		if direction.length() > 0.1:
+			velocity = direction.normalized() * speed
+			# Optionally: look_at(global_position + direction)
 		else:
 			velocity = Vector2.ZERO
 
