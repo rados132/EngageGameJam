@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpf2vohmaj01f"]
+[gd_scene load_steps=4 format=3 uid="uid://c8ljk0fgv7hrw"]
 
-[ext_resource type="Script" uid="uid://fla0vf2j3rf4" path="res://projecile_enemy.gd" id="1_0e48y"]
+[ext_resource type="Script" path="res://projecile_enemy.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://dsdu37w7f5plg" path="res://icon.svg" id="2_epypp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
