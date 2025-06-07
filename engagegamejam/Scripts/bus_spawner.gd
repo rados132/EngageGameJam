@@ -37,9 +37,6 @@ func _spawn_bus():
 	new_bus.connect("tree_exited", _on_bus_removed.bind(new_bus))
 	
 	print("Bus spawned at: ", new_bus.position)
-	audio_player.autoplay = true
-	audio_player.volume_db = 20.0 
-	audio_player.play()
 
 func _on_bus_removed(bus):
 	if bus in buses:
