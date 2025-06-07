@@ -103,5 +103,5 @@ sprite_frames = SubResource("SpriteFrames_vdoty")
 autoplay = "default"
 frame_progress = 0.101428
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D2" type="Camera2D" parent="."]
 zoom = Vector2(3.2, 3.2)

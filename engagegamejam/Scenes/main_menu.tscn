@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3pi2jirwu26n"]
+[gd_scene load_steps=7 format=3 uid="uid://bccllisa6ct6f"]
 
 [ext_resource type="Texture2D" uid="uid://ce41mtdjq7hst" path="res://Assets/Free/Background/Pink.png" id="1_28flt"]
 [ext_resource type="Script" uid="uid://dxew4njayvs77" path="res://Scripts/main_menu.gd" id="1_48xlc"]
