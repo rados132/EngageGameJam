@@ -283,9 +283,9 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_ieoyg")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bvgcc"]
-vertices = PackedVector2Array(450.797, -18, 1122, -2, 526, -2, 1278, -334, 1278, 638, 1147.34, 445.898, 1122, 306, 1138.87, -142, 59.8594, 226, 70, 236.141, 70, 301.641, 49, 343.641, -30, 321.867, 30, 226, 433.688, 204.461, 526, 306, 1123.33, 638, -658, 462.094, 420.203, 354, 1122.87, -334, -674.867, -142, 30, -18, -814, -334, -658.867, -334, -814, 638, 410, 302.992, 410, 228.141, -658, 638, -674, 330.133, -30, -18, -674, -18, 167.461, 363.383, 175.812, 330, 298.648, 330, 314.648, 354)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 1, 7), PackedInt32Array(8, 9, 10, 11, 12, 13), PackedInt32Array(14, 0, 2, 15), PackedInt32Array(4, 16, 5), PackedInt32Array(6, 5, 17, 18), PackedInt32Array(7, 19, 3), PackedInt32Array(20, 7, 1, 0), PackedInt32Array(20, 0, 21), PackedInt32Array(22, 23, 20, 24), PackedInt32Array(25, 26, 14, 15, 18), PackedInt32Array(17, 27, 24, 28), PackedInt32Array(13, 12, 29, 21), PackedInt32Array(20, 21, 29), PackedInt32Array(20, 29, 30), PackedInt32Array(24, 20, 30, 28), PackedInt32Array(17, 28, 12, 11), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(18, 15, 6), PackedInt32Array(34, 18, 17, 31), PackedInt32Array(17, 11, 31)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-664, -152, 1128, -152, 1112, -344, 1288, -344, 1288, -168, 1288, 472, 1288, 648, 1112, 648, 1136, 456, -648, 472, -648, 648, -824, 648, -824, 472, -824, 8, -824, -168, -824, -344, -648, -344), PackedVector2Array(-664, -8, -664, 320, -40, 312, -40, -8), PackedVector2Array(536, 8, 536, 296, 1112, 296, 1112, 8), PackedVector2Array(40, -8, 40, 216, 64, 216, 80, 232, 80, 304, 64, 336, 160, 352, 168, 320, 304, 320, 320, 344, 408, 344, 400, 304, 400, 224, 424, 200, 440, -8)])
+vertices = PackedVector2Array(1278, -334, 1278, 638, 1147.34, 445.898, 1122, 306, 1122, -2, 1138.87, -142, 526, -2, 526, 306, 434, 204.141, 434, -1.59375, 59.8594, 226, 70, 236.141, 70, 301.641, 49, 343.641, -30, 321.867, 30, 226, 1123.33, 638, -658, 462.094, 420.203, 354, 1122.87, -334, -674.867, -142, 30, -18.4297, -814, -334, -658.867, -334, -814, 638, 410, 302.992, 410, 228.141, -658, 638, -674, 330.133, -30, -18, -674, -18, 167.461, 363.383, 175.812, 330, 298.648, 330, 314.648, 354)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13, 14, 15), PackedInt32Array(1, 16, 2), PackedInt32Array(3, 2, 17, 18), PackedInt32Array(5, 19, 0), PackedInt32Array(20, 5, 4, 6), PackedInt32Array(20, 6, 9, 21), PackedInt32Array(22, 23, 20, 24), PackedInt32Array(25, 26, 8, 7, 18), PackedInt32Array(17, 27, 24, 28), PackedInt32Array(15, 14, 29, 21), PackedInt32Array(20, 21, 29, 30), PackedInt32Array(24, 20, 30, 28), PackedInt32Array(17, 28, 14, 13), PackedInt32Array(31, 32, 33, 34), PackedInt32Array(18, 7, 3), PackedInt32Array(34, 18, 17, 31), PackedInt32Array(17, 13, 31)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-664, -152, 1128, -152, 1112, -344, 1288, -344, 1288, -168, 1288, 472, 1288, 648, 1112, 648, 1136, 456, -648, 472, -648, 648, -824, 648, -824, 472, -824, 8, -824, -168, -824, -344, -648, -344), PackedVector2Array(-664, -8, -664, 320, -40, 312, -40, -8), PackedVector2Array(536, 8, 536, 296, 1112, 296, 1112, 8), PackedVector2Array(40, -8, 40, 216, 64, 216, 80, 232, 80, 304, 64, 336, 160, 352, 168, 320, 304, 320, 320, 344, 408, 344, 400, 304, 400, 224, 424, 200, 424, 8)])
 
 [node name="Kalu-hub(scene 0)" type="Node"]
 
@@ -447,13 +447,17 @@ position = Vector2(-152, 384)
 motion_mode = 1
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="NavigationRegion2D/Enemy_AI"]
-path_postprocessing = 2
 simplify_path = true
 avoidance_enabled = true
-radius = 60.5
+radius = 20.0
 avoidance_layers = 15
 avoidance_mask = 15
 debug_enabled = true
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+show_behind_parent = true
+radius = 62.22
+vertices = PackedVector2Array(536, 8, 1112, 8, 1112, 296, 536, 296)
 
 [node name="Main_Character" parent="." instance=ExtResource("2_25a10")]
 position = Vector2(790, 378)
