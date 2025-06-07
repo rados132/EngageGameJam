@@ -1,9 +1,42 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8830lrj5iqa"]
+[gd_scene load_steps=11 format=3 uid="uid://b8830lrj5iqa"]
 
 [ext_resource type="Texture2D" uid="uid://ce41mtdjq7hst" path="res://Assets/Free/Background/Pink.png" id="1_7h2jp"]
 [ext_resource type="Texture2D" uid="uid://bsrm3crxtco0s" path="res://Assets/Free/UI Pack/Vector/Blue/button_rectangle_flat.svg" id="1_a33jj"]
 [ext_resource type="Texture2D" uid="uid://cdslyiudow1qt" path="res://Assets/Free/UI Pack/Vector/Extra/button_rectangle_depth_line.svg" id="1_xkdtw"]
 [ext_resource type="Texture2D" uid="uid://bvbg7xogpl4w2" path="res://Assets/Free/UI Pack/Vector/Extra/button_rectangle_line.svg" id="3_mkmqd"]
+
+[sub_resource type="GDScript" id="GDScript_7h2jp"]
+script/source = "extends Control
+
+
+@onready var stats_inventory_window = $StatsInventoryWindow
+@onready var health_label = $StatsInventoryWindow/VBoxContainer/TabContainer/Stats/VBoxContainer/Health_Label
+@onready var level_label = $StatsInventoryWindow/VBoxContainer/TabContainer/Stats/VBoxContainer/Level_Label
+
+var is_window_open = false
+
+func _ready() -> void:
+	stats_inventory_window.visible = false
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed(\"open_inventory\"):
+		toggle_window()
+
+func toggle_window() -> void:
+	is_window_open = !is_window_open
+	print(\"Otvoreno!\")
+	stats_inventory_window.visible = is_window_open
+	
+	if is_window_open:
+		update_stats()
+		get_tree().paused = true
+	else:
+		get_tree().paused = false
+
+func update_stats() -> void:
+	health_label.text = \"100/100\"
+	level_label.text = \"Level 1\"
+"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxf2x"]
 texture = ExtResource("1_7h2jp")
@@ -53,35 +86,23 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -8.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+script = SubResource("GDScript_7h2jp")
 
 [node name="StatsInventoryWindow" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -197.0
-offset_right = 256.0
-offset_bottom = 197.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 209.0
+offset_bottom = 161.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_hxf2x")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="StatsInventoryWindow"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -196.0
-offset_right = 256.0
-offset_bottom = 196.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -103,6 +124,15 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
+[node name="GridContainer" type="GridContainer" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Inventory"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_bottom = 359.0
+grow_horizontal = 0
+
 [node name="Stats" type="Control" parent="StatsInventoryWindow/VBoxContainer/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 1
@@ -112,16 +142,18 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -256.0
-offset_right = 256.0
-offset_bottom = 367.0
+offset_left = -104.5
+offset_right = 103.5
+offset_bottom = 128.0
 grow_horizontal = 2
 theme_override_constants/separation = 15
 
 [node name="Health_Label" type="Label" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Stats/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "Health: 100"
 
 [node name="Level_Label" type="Label" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Stats/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "Level 1"

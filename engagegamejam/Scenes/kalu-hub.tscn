@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=4 uid="uid://ksqp5k47phfm"]
+[gd_scene load_steps=15 format=4 uid="uid://burjv7qljt11i"]
 
 [ext_resource type="Texture2D" uid="uid://p5glvm2hn77f" path="res://Assets/Free/Terrain/Terrain (16x16).png" id="1_2hjwy"]
-[ext_resource type="Script" uid="uid://dah4my2qujomx" path="res://Scenes/kalu_hub.gd" id="1_ieoyg"]
+[ext_resource type="Script" uid="uid://epmp3gf6csg5" path="res://Scripts/kalu_hub.gd" id="1_q2va5"]
 [ext_resource type="PackedScene" uid="uid://d1qghewe3uu5r" path="res://Assets/characters/main_character.tscn" id="2_25a10"]
 [ext_resource type="Texture2D" uid="uid://bu35iqfvilj0q" path="res://Assets/Free/Background/Purple.png" id="2_s5eos"]
 [ext_resource type="Texture2D" uid="uid://blyf5olk8qn7c" path="res://Assets/HubAsseti/stub.png" id="3_s5eos"]
@@ -293,11 +293,21 @@ texture = ExtResource("3_s5eos")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_ieoyg")
 
+<<<<<<< HEAD
 [node name="Kalu-hub(scene 0)" type="Node" node_paths=PackedStringArray("nav_region")]
 script = ExtResource("1_ieoyg")
 nav1 = SubResource("NavigationPolygon_bvgcc")
 nav2 = SubResource("NavigationPolygon_q2va5")
 nav_region = NodePath("NavigationRegion2D")
+=======
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bvgcc"]
+vertices = PackedVector2Array(1257.9, -313.898, 1257.9, 617.898, 1170.14, 425.594, 1142.1, 326.102, 1142.1, -22.1016, 1160.71, -121.898, 505.898, -22.1016, 505.898, 326.102, 454.102, 212.469, 454.102, -22.1016, 47.3828, 229.344, 49.8984, 236.898, 49.8984, 366.102, -9.89844, 341.719, 25.8984, 218.602, 430.102, 300.297, 430.102, 236.461, 446.547, 366.102, 1146.1, 617.898, -678.102, 442.172, 1144.72, -313.898, -696.711, -121.898, -9.89844, -38.1016, -793.898, -313.898, -680.719, -313.898, -793.898, 617.898, -678.102, 617.898, -694.102, 350.492, 25.8984, -22.1016, 164.469, 366.102, 180.461, 350.102, 299.539, 350.102, 315.531, 366.102, -694.102, -38.1016)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13, 14), PackedInt32Array(15, 16, 8, 7, 17), PackedInt32Array(1, 18, 2), PackedInt32Array(3, 2, 19, 17), PackedInt32Array(5, 20, 0), PackedInt32Array(21, 5, 4, 6), PackedInt32Array(21, 6, 9, 22), PackedInt32Array(23, 24, 21, 25), PackedInt32Array(19, 26, 25, 27), PackedInt32Array(14, 13, 22, 28), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(17, 7, 3), PackedInt32Array(32, 17, 19), PackedInt32Array(29, 32, 19), PackedInt32Array(12, 29, 19), PackedInt32Array(13, 12, 19, 27), PackedInt32Array(27, 25, 21, 33), PackedInt32Array(22, 33, 21), PackedInt32Array(22, 9, 28)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-664, -152, 1128, -152, 1112, -344, 1288, -344, 1288, -168, 1288, 472, 1288, 648, 1112, 648, 1136, 456, -648, 472, -648, 648, -824, 648, -824, 472, -824, 8, -824, -168, -824, -344, -648, -344), PackedVector2Array(-664, -8, -664, 320, -40, 312, -40, -8), PackedVector2Array(536, 8, 536, 296, 1112, 296, 1112, 8), PackedVector2Array(56, 8, 56, 200, 72, 208, 80, 232, 80, 304, 80, 336, 152, 336, 168, 320, 312, 320, 328, 336, 408, 336, 400, 304, 400, 224, 424, 200, 424, 8)])
+
+[node name="Kalu-hub(scene 0)" type="Node"]
+script = ExtResource("1_q2va5")
+>>>>>>> origin/development
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bvgcc")
@@ -450,13 +460,25 @@ text = "70ica
 [node name="Parallax2D" type="Parallax2D" parent="."]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(0, -8)
 navigation_polygon = SubResource("NavigationPolygon_bvgcc")
 
 [node name="Enemy_AI" parent="NavigationRegion2D" instance=ExtResource("5_bvgcc")]
 position = Vector2(-152, 384)
+motion_mode = 1
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="NavigationRegion2D/Enemy_AI"]
-radius = 60.5
+simplify_path = true
+avoidance_enabled = true
+radius = 20.0
+avoidance_layers = 15
+avoidance_mask = 15
+debug_enabled = true
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+show_behind_parent = true
+radius = 62.22
+vertices = PackedVector2Array(536, 8, 1112, 8, 1112, 296, 536, 296)
 
 [node name="Main_Character" parent="." instance=ExtResource("2_25a10")]
 position = Vector2(790, 378)
