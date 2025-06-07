@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d1qghewe3uu5r"]
+[gd_scene load_steps=16 format=3 uid="uid://d1qghewe3uu5r"]
 
 [ext_resource type="Script" uid="uid://vwmrxnq7d01i" path="res://Scripts/player.gd" id="1_tc2lg"]
 [ext_resource type="Texture2D" uid="uid://5nolmgagkhga" path="res://Assets/sava/IdleSava (32x32).png" id="2_tc2lg"]
@@ -90,10 +90,6 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6x2ms"]
-
-[sub_resource type="Theme" id="Theme_tc2lg"]
-
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_tc2lg")
 metadata/_edit_vertical_guides_ = [-30.0]
@@ -109,20 +105,3 @@ frame_progress = 0.101428
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 zoom = Vector2(3.2, 3.2)
-
-[node name="AttackArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-scale = Vector2(1.2, 1.2)
-shape = SubResource("CapsuleShape2D_6x2ms")
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -14.0
-offset_top = -32.0
-offset_right = 42.0
-offset_bottom = -5.0
-scale = Vector2(0.5, 0.5)
-theme = SubResource("Theme_tc2lg")
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(16, 0)

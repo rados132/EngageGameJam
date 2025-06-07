@@ -460,6 +460,7 @@ avoidance_enabled = true
 radius = 20.0
 avoidance_layers = 15
 avoidance_mask = 15
+debug_enabled = true
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 show_behind_parent = true
