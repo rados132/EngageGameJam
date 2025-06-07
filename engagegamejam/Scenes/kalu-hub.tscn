@@ -449,6 +449,8 @@ position = Vector2(-152, 384)
 simplify_path = true
 avoidance_enabled = true
 radius = 60.5
+avoidance_layers = 15
+avoidance_mask = 15
 debug_enabled = true
 
 [node name="Main_Character" parent="." instance=ExtResource("2_25a10")]
