@@ -7,6 +7,8 @@ extends Node
 @export var track_end_x: float = 5600.0
 @export var track_y: Array[float] = [120, 24, -68]
 
+@onready var audio_player = $AudioStreamPlayer2D
+
 var spawn_timer: Timer
 var buses: Array[Node] = []
 
@@ -35,6 +37,9 @@ func _spawn_bus():
 	new_bus.connect("tree_exited", _on_bus_removed.bind(new_bus))
 	
 	print("Bus spawned at: ", new_bus.position)
+	audio_player.autoplay = true
+	audio_player.volume_db = 20.0 
+	audio_player.play()
 
 func _on_bus_removed(bus):
 	if bus in buses:
