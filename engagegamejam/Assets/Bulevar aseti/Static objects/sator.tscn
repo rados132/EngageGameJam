@@ -11,3 +11,6 @@ centered = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, 0, -32, 0, 0, -24, 32, 0)
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(-32, 0, 0, -24, 32, 0)

@@ -8,7 +8,7 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "CharacterBody2D":
-		tree_sprite.modulate.a = 0.4  # učini drvo providnim
+		tree_sprite.modulate.a = 0.6  # učini drvo providnim
 
 func _on_body_exited(body):
 	if body.name == "CharacterBody2D":
