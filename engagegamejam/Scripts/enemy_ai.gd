@@ -30,7 +30,7 @@ func _physics_process(_delta: float) -> void:
 		if distance > 2.0: # Only move if not already at the point
 			var direction = (next_path_point - global_position).normalized()
 			velocity = direction * speed
-			look_at(next_path_point)
+			# look_at(next_path_point)
 		else:
 			velocity = Vector2.ZERO
 

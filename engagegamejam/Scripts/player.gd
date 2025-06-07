@@ -22,10 +22,10 @@ func _physics_process(delta):
 
 func take_damage(amount):
 	health -= amount
-	print("Player health:", health)
+	print("Savin health:", health)
 	if health <= 0:
 		die()
 
 func die():
-	print("Player has died!")
+	print("Sava je umro!")
 	# Add your death logic here (e.g., respawn, game over, etc.)
