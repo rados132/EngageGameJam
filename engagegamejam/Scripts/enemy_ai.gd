@@ -19,7 +19,7 @@ func _ready():
 	
 	agent.target_position = target.global_position
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	agent.target_position = target.global_position
 
 	if agent.is_navigation_finished():
