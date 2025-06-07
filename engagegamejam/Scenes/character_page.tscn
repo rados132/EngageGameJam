@@ -1,0 +1,127 @@
+[gd_scene load_steps=10 format=3 uid="uid://b8830lrj5iqa"]
+
+[ext_resource type="Texture2D" uid="uid://ce41mtdjq7hst" path="res://Assets/Free/Background/Pink.png" id="1_7h2jp"]
+[ext_resource type="Texture2D" uid="uid://bsrm3crxtco0s" path="res://Assets/Free/UI Pack/Vector/Blue/button_rectangle_flat.svg" id="1_a33jj"]
+[ext_resource type="Texture2D" uid="uid://cdslyiudow1qt" path="res://Assets/Free/UI Pack/Vector/Extra/button_rectangle_depth_line.svg" id="1_xkdtw"]
+[ext_resource type="Texture2D" uid="uid://bvbg7xogpl4w2" path="res://Assets/Free/UI Pack/Vector/Extra/button_rectangle_line.svg" id="3_mkmqd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxf2x"]
+texture = ExtResource("1_7h2jp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mkmqd"]
+texture = ExtResource("1_a33jj")
+expand_margin_top = 35.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xkdtw"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 5.0
+texture = ExtResource("1_xkdtw")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7h2jp"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 5.0
+texture = ExtResource("3_mkmqd")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(0.741385, 0.741385, 0.741385, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a33jj"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 20.0
+content_margin_bottom = 5.0
+texture = ExtResource("1_xkdtw")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[node name="CharacterPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatsInventoryWindow" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -197.0
+offset_right = 256.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hxf2x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatsInventoryWindow"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -196.0
+offset_right = 256.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="StatsInventoryWindow/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_unselected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hovered_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_styles/panel = SubResource("StyleBoxTexture_mkmqd")
+theme_override_styles/tab_selected = SubResource("StyleBoxTexture_xkdtw")
+theme_override_styles/tab_hovered = SubResource("StyleBoxTexture_7h2jp")
+theme_override_styles/tab_unselected = SubResource("StyleBoxTexture_a33jj")
+current_tab = 1
+clip_tabs = false
+
+[node name="Inventory" type="Control" parent="StatsInventoryWindow/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Stats" type="Control" parent="StatsInventoryWindow/VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Stats"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -256.0
+offset_right = 256.0
+offset_bottom = 367.0
+grow_horizontal = 2
+theme_override_constants/separation = 15
+
+[node name="Health_Label" type="Label" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Stats/VBoxContainer"]
+layout_mode = 2
+text = "Health: 100"
+
+[node name="Level_Label" type="Label" parent="StatsInventoryWindow/VBoxContainer/TabContainer/Stats/VBoxContainer"]
+layout_mode = 2
+text = "Level 1"
