@@ -1,5 +1,5 @@
 extends Node2D
-var bullet_path = preload("res://projektil.tscn")
+var bullet_path = preload("res://Assets/projectile_enemy/projektil.tscn")
 
 
 func _physics_process(_delta: float) -> void:
