@@ -1,13 +1,12 @@
 extends Node
 
 @export var bus_scene: PackedScene  # Drag your Bus.tscn here in editor
-@export var spawn_interval: float = 2.0  
+@export var spawn_interval: float = 1.5 
 @export var bus_distance: float = 1000.0  
 @export var track_start_x: float = 4000.0 
 @export var track_end_x: float = 5600.0
-@export var track_y: Array[float] = [120, 24, -68]
+@export var track_y: Array[float] = [48, -24, -88]
 
-@onready var audio_player = $AudioStreamPlayer2D
 
 var spawn_timer: Timer
 var buses: Array[Node] = []
