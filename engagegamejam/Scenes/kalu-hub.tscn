@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bu35iqfvilj0q" path="res://Assets/Free/Background/Purple.png" id="2_s5eos"]
 [ext_resource type="Texture2D" uid="uid://blyf5olk8qn7c" path="res://Assets/HubAsseti/stub.png" id="3_s5eos"]
 [ext_resource type="PackedScene" uid="uid://chcshj8fm1l03" path="res://Assets/characters/enemy_ai.tscn" id="5_bvgcc"]
-[ext_resource type="PackedScene" uid="uid://bte6f3a24pv81" path="res://Scenes/exit_etf.tscn" id="7_q2va5"]
+[ext_resource type="PackedScene" uid="uid://bw8afg15par0o" path="res://Scenes/exit_etf.tscn" id="7_q2va5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5eos"]
 texture = ExtResource("1_2hjwy")

@@ -15,4 +15,4 @@ func _ready():
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Main_Character":
 		print("Player entered, switching scene")
-		get_tree().change_scene_to_file("res://Scenes/kalu-bulevar.tscn")
+		SceneTransition.fade_to_scene("res://Scenes/kalu-bulevar.tscn")
