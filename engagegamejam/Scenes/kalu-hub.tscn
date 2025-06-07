@@ -292,6 +292,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-664, -152, 1128, -152,
 script = ExtResource("1_q2va5")
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(8, 0)
 tile_set = SubResource("TileSet_bvgcc")
 format = 2
 
