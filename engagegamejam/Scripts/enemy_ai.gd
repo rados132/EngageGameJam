@@ -5,10 +5,15 @@ extends CharacterBody2D
 const speed = 80
 const attack_cooldown = 1.0 # u sekundama
 const damage = 10
+const MAX_HEALTH = 500
+
+var health: float = MAX_HEALTH
 var player_in_area = false
 
 
 func _ready():
+	add_to_group("enemies")
+	update_health_bar()
 	var timer = Timer.new()
 	timer.one_shot = false # Repeat attacks
 	timer.wait_time = attack_cooldown
@@ -81,3 +86,19 @@ func attack():
 		target.take_damage(damage)
 		animated_sprite_2d.animation = "napad"
 	print("Napad!")  # Zamijeni kasnije sa nanosenjem stete
+
+
+func take_damage(amount):
+	health -= amount
+	update_health_bar()
+	print("Radoshev health:", health)
+	if health <= 0:
+		die()
+
+func die():
+	print("Radosh je umro!")
+	# Add your death logic here (e.g., respawn, game over, etc.)
+
+
+func update_health_bar():
+	$ProgressBar.value = health / MAX_HEALTH * 100
