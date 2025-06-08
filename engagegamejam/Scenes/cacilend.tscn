@@ -1622,7 +1622,7 @@ position = Vector2(1128, 144)
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_f7skt")]
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(1488, 128)
+position = Vector2(520, 840)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_jpnai")
@@ -1646,3 +1646,9 @@ position = Vector2(328, 136)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="NavigationRegion2D/BatinasSaPalicom2"]
 debug_enabled = true
+
+[node name="Switch" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Switch"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Switch/Area2D"]

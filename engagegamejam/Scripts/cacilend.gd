@@ -14,6 +14,9 @@ var selected: int = 1
 func _ready():
 
 	var doShit: bool  = false
+	for layer: TileMapLayer in tilemap2.get_children():
+			layer.visible = false
+			layer.collision_enabled = false
 	
 	if(doShit):
 		for i in 5:
