@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dghvpexgmiof1"]
+[gd_scene load_steps=11 format=3 uid="uid://dghvpexgmiof1"]
 
 [ext_resource type="Script" uid="uid://byivq3f1f08vg" path="res://Scripts/bus.gd" id="1_x3w0u"]
 [ext_resource type="Texture2D" uid="uid://pevjttxdaqwd" path="res://Assets/Bulevar aseti/busAnimiran.png" id="2_ut2j0"]
+[ext_resource type="AudioStream" uid="uid://c1w2ho8xd6dif" path="res://Assets/Audio/Fast Car (Passing By) - Sound Effect for Editing.mp3" id="3_g73p1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g73p1"]
 size = Vector2(120, 48)
@@ -64,5 +65,9 @@ frame_progress = 0.983135
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
 position = Vector2(-8, 0)
 shape = SubResource("RectangleShape2D_ut2j0")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_g73p1")
+volume_db = 10.0
 
 [connection signal="body_entered" from="DamageZone" to="." method="_on_damage_zone_body_entered"]

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 150.0
+@export var speed: float = 300.0
 @export var track_start_x: float = 5200
 @export var track_end_x: float = 5360.0
 @export var track_y: float = 80
@@ -8,6 +8,7 @@ var assigned_track_y: float = 0
 var current_target_x: float
 
 @onready var damage_area = $DamageZone	
+@onready var audio_player = $AudioStreamPlayer2D
 
 func _ready():
 	assigned_track_y = global_position.y
@@ -19,6 +20,7 @@ func _ready():
 		print("ERROR: DamageZone not found!")
 	
 	print("Bus starting journey from ", global_position)
+	audio_player.play()
 
 func _physics_process(delta: float) -> void:
 	velocity.x = speed
