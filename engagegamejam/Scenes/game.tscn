@@ -6,4 +6,4 @@
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_ebmjs")]
+[node name="Main_Character" parent="." instance=ExtResource("1_ebmjs")]

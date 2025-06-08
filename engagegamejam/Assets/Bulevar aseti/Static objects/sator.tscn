@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://82ao2mvbwm4o"]
+
+[ext_resource type="Texture2D" uid="uid://ds1wpjj1cmump" path="res://Assets/Bulevar aseti/sator.png" id="1_iro8q"]
+
+[node name="Sator" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-32, -48)
+texture = ExtResource("1_iro8q")
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, -32, 0, 0, -24, 32, 0)
