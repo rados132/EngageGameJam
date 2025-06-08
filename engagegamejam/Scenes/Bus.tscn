@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dghvpexgmiof1"]
 
-[ext_resource type="Script" uid="uid://byivq3f1f08vg" path="res://Scripts/bus.gd" id="1_x3w0u"]
+[ext_resource type="Script" path="res://Scripts/bus.gd" id="1_x3w0u"]
 [ext_resource type="Texture2D" uid="uid://pevjttxdaqwd" path="res://Assets/Bulevar aseti/busAnimiran.png" id="2_ut2j0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g73p1"]
