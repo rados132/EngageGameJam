@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo58ucd63o5ti"]
+
+[ext_resource type="Texture2D" uid="uid://ce41mtdjq7hst" path="res://Assets/Free/Background/Pink.png" id="1_4pnsc"]
+[ext_resource type="Texture2D" uid="uid://cv6ouxx5wqm8o" path="res://Assets/Free/UI Pack/PNG/Extra/Default/button_rectangle_depth_line.png" id="2_gb262"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1d6nr"]
+texture = ExtResource("2_gb262")
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4pnsc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -55.0
+offset_right = 202.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "You died :("
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -128.0
+offset_right = 94.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.260307, 0.235673, 0.176638, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxTexture_1d6nr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1d6nr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1d6nr")
+text = "Respawn"
