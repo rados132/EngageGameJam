@@ -1,8 +1,11 @@
 extends CharacterBody2D
-@onready var target = $"../../Main_Character"
+@onready var target = $"../../CharacterBody2D"
 @onready var agent = $NavigationAgent2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
-const speed = 80
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d_2: AudioStreamPlayer2D = $AudioStreamPlayer2D2
+
+const speed = 40
 const attack_cooldown = 1.0 # u sekundama
 const damage = 10
 const MAX_HEALTH = 500
@@ -25,7 +28,8 @@ func _ready():
 	$AttackArea.body_exited.connect(_on_attack_area_body_exited)
 	
 	agent.target_position = target.global_position
-
+	
+	audio_stream_player_2d_2.play()
 
 func _physics_process(delta: float) -> void:
 	navigation()
@@ -63,14 +67,15 @@ func navigate(delta: float) -> void:
 
 
 func _on_attack_area_body_entered(body):
-	if body.name == "Main_Character":
+	if body.name == "CharacterBody2D":
 		player_in_area = true
 		$AttackCooldownTimer.start()
+		audio_stream_player_2d.play()
 		attack() # Immediate attack on entry
 
 
 func _on_attack_area_body_exited(body):
-	if body.name == "Main_Character":
+	if body.name == "CharacterBody2D":
 		player_in_area = false
 		$AttackCooldownTimer.stop()
 		animated_sprite_2d.animation = "default"

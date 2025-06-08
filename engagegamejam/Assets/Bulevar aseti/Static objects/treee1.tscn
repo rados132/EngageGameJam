@@ -18,3 +18,10 @@ polygon = PackedVector2Array(0, -16, -16, -16, -24, -24, -24, -40, -8, -64, 8, -
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, -8, -8, -8, -8, -16, 8, -16, 8, -8, 0, -8)
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+position = Vector2(0, -8)
+radius = 10.0
+vertices = PackedVector2Array(-8, -8, -8, -16, 8, -16, 8, -8)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

@@ -1,11 +1,12 @@
-[gd_scene load_steps=15 format=4 uid="uid://ksqp5k47phfm"]
+[gd_scene load_steps=16 format=4 uid="uid://burjv7qljt11i"]
 
 [ext_resource type="Texture2D" uid="uid://p5glvm2hn77f" path="res://Assets/Free/Terrain/Terrain (16x16).png" id="1_2hjwy"]
 [ext_resource type="PackedScene" uid="uid://d1qghewe3uu5r" path="res://Assets/characters/main_character.tscn" id="2_25a10"]
 [ext_resource type="Texture2D" uid="uid://bu35iqfvilj0q" path="res://Assets/Free/Background/Purple.png" id="2_s5eos"]
 [ext_resource type="Texture2D" uid="uid://blyf5olk8qn7c" path="res://Assets/HubAsseti/stub.png" id="3_s5eos"]
 [ext_resource type="PackedScene" uid="uid://chcshj8fm1l03" path="res://Assets/characters/enemy_ai.tscn" id="5_bvgcc"]
-[ext_resource type="PackedScene" uid="uid://bw8afg15par0o" path="res://Scenes/exit_etf.tscn" id="7_q2va5"]
+[ext_resource type="AudioStream" uid="uid://chwo5qqhqpx6w" path="res://Assets/Audio/Pixel Adventure (1).mp3" id="7_hbndb"]
+[ext_resource type="PackedScene" path="res://Scenes/exit_etf.tscn" id="7_q2va5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5eos"]
 texture = ExtResource("1_2hjwy")
@@ -462,8 +463,12 @@ show_behind_parent = true
 radius = 62.22
 vertices = PackedVector2Array(536, 8, 1112, 8, 1112, 296, 536, 296)
 
-[node name="Main_Character" parent="." instance=ExtResource("2_25a10")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_25a10")]
 position = Vector2(790, 378)
 
 [node name="ExitEtf" parent="." instance=ExtResource("7_q2va5")]
 position = Vector2(216, 472)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_hbndb")
+autoplay = true

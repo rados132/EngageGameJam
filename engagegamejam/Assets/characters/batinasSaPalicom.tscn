@@ -1,0 +1,133 @@
+[gd_scene load_steps=18 format=3 uid="uid://c73o3pgw5bn2c"]
+
+[ext_resource type="Texture2D" uid="uid://bypi0syn0ccm3" path="res://Assets/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_1qqek"]
+[ext_resource type="Script" uid="uid://dlbi12ywvtvt1" path="res://Scripts/enemy_ai.gd" id="1_f5s6x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5s6x"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wh4x4"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxsbn"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jcdg"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spjw7"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lwad"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ighkm"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cncd"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v7pa"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1cpm"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au23m"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cr4j"]
+atlas = ExtResource("1_1qqek")
+region = Rect2(960, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pnr6x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5s6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wh4x4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxsbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jcdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spjw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lwad")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ighkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cncd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v7pa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1cpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au23m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cr4j")
+}],
+"loop": true,
+"name": &"running",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x03ir"]
+radius = 30.0
+height = 82.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wh4x4"]
+radius = 51.0392
+
+[node name="BatinasSaPalicom" type="CharacterBody2D"]
+script = ExtResource("1_f5s6x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pnr6x")
+autoplay = "default"
+frame_progress = 0.0631785
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_x03ir")
+
+[node name="AttackArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+visible = false
+shape = SubResource("CircleShape2D_wh4x4")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -28.0
+offset_top = -55.0
+offset_right = 29.0
+offset_bottom = -28.0

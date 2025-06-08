@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://bvel66stbxs6y"]
+[gd_scene load_steps=14 format=4 uid="uid://b306rddda1ibd"]
 
 [ext_resource type="Texture2D" uid="uid://sbtka8wb0m0k" path="res://Assets/Bulevar aseti/boulevar.png" id="1_6asvu"]
-[ext_resource type="Script" uid="uid://iy2mht0ly3nm" path="res://Scripts/bus_spawner.gd" id="1_wm8lu"]
+[ext_resource type="Script" path="res://Scripts/bus_spawner.gd" id="1_wm8lu"]
 [ext_resource type="PackedScene" uid="uid://d1qghewe3uu5r" path="res://Assets/characters/main_character.tscn" id="2_20rnu"]
 [ext_resource type="Texture2D" uid="uid://dkijbjsei0mti" path="res://Assets/Bulevar aseti/etf.png" id="2_wm8lu"]
 [ext_resource type="PackedScene" uid="uid://dghvpexgmiof1" path="res://Scenes/Bus.tscn" id="3_20rnu"]
