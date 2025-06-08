@@ -1,7 +1,7 @@
 extends Node
 
 @export var bus_scene: PackedScene  # Drag your Bus.tscn here in editor
-@export var spawn_interval: float = 1.5 
+@export var spawn_interval: float = 3 
 @export var bus_distance: float = 1000.0  
 @export var track_start_x: float = 4000.0 
 @export var track_end_x: float = 5600.0
