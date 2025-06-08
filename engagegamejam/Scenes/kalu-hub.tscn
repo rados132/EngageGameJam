@@ -462,7 +462,7 @@ show_behind_parent = true
 radius = 62.22
 vertices = PackedVector2Array(536, 8, 1112, 8, 1112, 296, 536, 296)
 
-[node name="Main_Character" parent="." instance=ExtResource("2_25a10")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_25a10")]
 position = Vector2(790, 378)
 
 [node name="ExitEtf" parent="." instance=ExtResource("7_q2va5")]
