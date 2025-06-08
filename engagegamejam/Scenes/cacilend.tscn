@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://7ghe7gema8y2"]
+[gd_scene load_steps=10 format=4 uid="uid://8dvomrtvrgw3"]
 
 [ext_resource type="Texture2D" uid="uid://qyrgusmnfng8" path="res://Assets/Bulevar aseti/trava.png" id="1_gpago"]
 [ext_resource type="PackedScene" uid="uid://d1qghewe3uu5r" path="res://Assets/characters/main_character.tscn" id="2_f7skt"]

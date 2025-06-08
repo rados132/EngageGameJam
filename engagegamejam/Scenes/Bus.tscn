@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://pevjttxdaqwd" path="res://Assets/Bulevar aseti/busAnimiran.png" id="2_ut2j0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g73p1"]
-size = Vector2(120, 48)
+size = Vector2(124, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g73p1"]
 atlas = ExtResource("2_ut2j0")
@@ -43,13 +43,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ut2j0"]
-size = Vector2(120, 32)
+size = Vector2(124, 32)
 
 [node name="Bus" type="CharacterBody2D"]
 script = ExtResource("1_x3w0u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, 0)
+position = Vector2(-6, 0)
 shape = SubResource("RectangleShape2D_g73p1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -62,7 +62,7 @@ frame_progress = 0.983135
 [node name="DamageZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageZone"]
-position = Vector2(-8, 0)
+position = Vector2(-6, 0)
 shape = SubResource("RectangleShape2D_ut2j0")
 
 [connection signal="body_entered" from="DamageZone" to="." method="_on_damage_zone_body_entered"]
